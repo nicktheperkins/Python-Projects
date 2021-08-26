@@ -78,7 +78,7 @@ def score(nice,mean,name):
 def win(nice,mean,name):
     # Substitute the {} wildcards with our variable values
     print("\nNice job {0}, you win! \nEveryone loves you and you've \nmade lots of friends along the way!".format(name))
-    playsound('/Users/Nick/Downloads/Python Projects/win_sound.mp3')
+    playsound('/Users/Nick/Documents/GitHub/Python-Projects/win_sound.mp3')
     # call again function and pass in our variables
     again(nice,mean,name)
 
@@ -86,7 +86,7 @@ def win(nice,mean,name):
 def lose(nice,mean,name):
     # Substritutes the {} wildcard with our variable values
     print("\nAhhh too bad, you lose! \n{0}, you are not well liked \nvan by anyone, you might want to be nicer to people!".format(name))
-    playsound('/Users/Nick/Downloads/Python Projects/lose_sound.mp3')
+    playsound('/Users/Nick/Documents/GitHub/Python-Projects/lose_sound.mp3')
     # call again function and pass in our variables
     again(nice,mean,name)
 
