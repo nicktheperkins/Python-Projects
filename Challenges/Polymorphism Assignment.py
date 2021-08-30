@@ -14,7 +14,7 @@ class User:
         else:
             print("The password or email is incorrect.")
 
-# Child class with two of its own attributes
+# Child class with three of its own attributes
 class Employee(User):
     base_pay = 11.00
     department = 'General'
@@ -28,7 +28,7 @@ class Employee(User):
         else:
             print("The pin or email is incorrect.")
 
-# Child class with two of its own attributes
+# Child class with three of its own attributes
 class Customer(User):
     mailing_address = ' '
     mailing_zipcode = '84003'
