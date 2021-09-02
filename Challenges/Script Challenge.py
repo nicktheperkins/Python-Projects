@@ -3,7 +3,7 @@ import os
 import time
 
 
-fPath = 'C:\\Users\\Nick\\Downloads\\Python Projects\\Modules Practice\\Script_Assignment_Directory\\'
+fPath = 'C:\\Users\\Nick\\Documents\\GitHub\\Python-Projects\\Modules Practice\\Script_Assignment_Directory\\'
 
 def loop():
     for txt in os.listdir(fPath): #creates an array of files from the path

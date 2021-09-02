@@ -1,9 +1,12 @@
-import tkinter as tk
-from tkinter import filedialog
+import time
+from datetime import datetime
 
-root = tk.Tk()
+# now = time.ctime(time.time())
+# print(now)
 
-path = filedialog.askdirectory(initialdir="/", title="Select file")
-print(path)
+now = datetime.now()
 
-root.mainloop()
+seconds_since_midnight = (now - now.replace(hour=0,minute=0,second=0,microsecond=0)).total_seconds()
+
+print(now)
+print(seconds_since_midnight)
