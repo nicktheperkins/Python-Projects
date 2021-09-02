@@ -6,16 +6,25 @@ from datetime import datetime
 import pytz
 
 
-def getTime():
-    Portland = datetime.now(pytz.timezone('US/Pacific'))
-    New York = datetime.now(pytz.timezone('US/Eastern'))
-    London = datetime.now(pytz.timezone('Europe/London'))
-    
-time1 = datetime.now(pytz.timezone('Europe/London'))
+def branchStatus():
+    time1 = int(datetime.now(pytz.timezone('US/Pacific')).strftime('%I'))
+    time2 = int(datetime.now(pytz.timezone('US/Eastern')).strftime('%I'))
+    time3 = int(datetime.now(pytz.timezone('Europe/London')).strftime('%I'))
+    branches = {'Portland': time1, 'New York': time2, 'London': time3}
+    for key, value in branches.items():
+        if value >= 9 or value > 17:
+            print("{} branch is open".format(key))
+        else:
+            print("{} branch is closed".format(key))
+
+branchStatus()
+
+
+"""time1 = datetime.now(pytz.timezone('Europe/London'))
 print(time1.strftime('%I:%M %p %m/%d/%Y'))
 
 time2 = datetime.now(pytz.timezone('US/Pacific'))
 print(time2.strftime('%I:%M %p %m/%d/%Y'))
 
 time3 = datetime.now(pytz.timezone('US/Eastern'))
-print(time3.strftime('%I:%M %p %m/%d/%Y'))
+print(time3.strftime('%I:%M %p %m/%d/%Y'))"""
