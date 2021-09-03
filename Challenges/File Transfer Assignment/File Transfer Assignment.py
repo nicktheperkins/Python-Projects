@@ -4,6 +4,7 @@ import os
 from datetime import datetime
 from tkinter import *
 import tkinter as tk
+import tkinter.filedialog
 
 now = time.time()
 time = datetime.now()
@@ -39,12 +40,12 @@ def load_gui(self):
     self.btn_check.grid(row=4,column=1,padx=(35,0),pady=(10,0),sticky=W)
 
 def choose_folder1(self):
-    path = filedialog.askdirectory(initialdir="/", title="Select file")
+    path = tkinter.filedialog.askdirectory(initialdir="/", title="Select file")
     self.txt_browse1.delete(0,END)
     self.txt_browse1.insert(tk.INSERT,path)
     
 def choose_folder2(self):
-    path = filedialog.askdirectory(initialdir="/", title="Select file")
+    path = tkinter.filedialog.askdirectory(initialdir="/", title="Select file")
     self.txt_browse2.delete(0,END)
     self.txt_browse2.insert(tk.INSERT,path)
 
